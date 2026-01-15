@@ -1,0 +1,3178 @@
+[32m[MONITOR][0m: Initializing monitor
+[32m[MONITOR][0m: Initialized global_cpuset for CORESET=0-15, core_count=16
+[32m[MONITOR][0m: PAPI_library_init OK (ret=117571584)
+[32m[MONITOR][0m: PAPI_thread_init OK
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Main thread 201217: sched_getcpu returned 5
+[32m[MONITOR][0m: Main thread 201217 assigned to CPU 5
+[32m[MONITOR][0m: Setting up event set for TID 201217
+[32m[MONITOR][0m: Added PAPI event: INST_RETIRED:ANY_P
+[32m[MONITOR][0m: Added PAPI event: perf::PERF_COUNT_HW_CACHE_MISSES
+[32m[MONITOR][0m: Added PAPI event: ix86arch::UNHALTED_CORE_CYCLES
+[32m[MONITOR][0m: Added PAPI event: MEM_INST_RETIRED:ANY
+[32m[MONITOR][0m: Added PAPI event: perf::FAULTS
+[32m[MONITOR][0m: Added PAPI event: CYCLE_ACTIVITY:CYCLES_MEM_ANY
+[32m[MONITOR][0m: PAPI_read(initial) OK for TID 201217
+[32m[MONITOR][0m: Sending startup notification to scheduler
+[32m[MONITOR][0m: Starting monitor loop in a separate thread
+[32m[MONITOR][0m: pthread_create called
+[32m[MONITOR][0m: Thread wrapper started
+[32m[MONITOR][0m: Thread 201220: sched_getcpu returned 15
+[32m[MONITOR][0m: Thread 201220 assigned to CPU 15
+[32m[MONITOR][0m: Setting up event set for TID 201220
+[32m[MONITOR][0m: Added PAPI event: INST_RETIRED:ANY_P
+[32m[MONITOR][0m: Added PAPI event: perf::PERF_COUNT_HW_CACHE_MISSES
+[32m[MONITOR][0m: Added PAPI event: ix86arch::UNHALTED_CORE_CYCLES
+[32m[MONITOR][0m: Added PAPI event: MEM_INST_RETIRED:ANY
+[32m[MONITOR][0m: Added PAPI event: perf::FAULTS
+[32m[MONITOR][0m: Added PAPI event: CYCLE_ACTIVITY:CYCLES_MEM_ANY
+[32m[MONITOR][0m: PAPI_read(initial) OK for TID 201220
+[32m[MONITOR][0m: Starting monitor loop
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 switched to CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.705137
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000165
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.873832
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267803
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000001
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000116
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000006
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.711317
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000148
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871943
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267544
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000009
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.717870
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000120
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869850
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267230
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000005
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721871
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000109
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868294
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267000
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000004
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000018
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000018
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721476
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000103
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868698
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267055
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000003
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.722638
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000100
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868273
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266992
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000002
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723698
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000097
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867839
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266928
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000002
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.722971
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000095
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868231
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266983
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000002
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000008
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000008
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723441
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000094
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868094
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266962
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000002
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724451
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000092
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867639
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266897
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723970
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000092
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867908
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266935
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724036
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000091
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867905
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266934
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000005
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000005
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723830
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000091
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868000
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266947
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201217 switched to CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.722701
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000092
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868483
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267016
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.722613
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000093
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868488
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267018
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000004
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000004
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.722860
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000093
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868353
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266998
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.722663
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000093
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868465
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267014
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723026
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000093
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868290
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266989
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723100
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000092
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868269
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266985
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000003
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000003
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723209
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000092
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868218
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266978
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723401
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000092
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868131
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266965
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723366
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000092
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868168
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266970
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723693
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000091
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868012
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266948
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000003
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000003
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723574
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000091
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868097
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266960
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723795
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000090
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867997
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266945
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723800
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000090
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868012
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266947
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723803
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000090
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868015
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266947
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000002
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000002
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723991
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000088
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867952
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266938
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201217 switched to CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 switched to CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723304
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000089
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868282
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266986
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723204
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000089
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868311
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266991
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723078
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000088
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868376
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267000
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000002
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000002
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723145
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000088
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868343
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266995
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723181
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000088
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868327
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266993
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723338
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000088
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868242
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266981
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723314
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000088
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868257
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266983
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000002
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000002
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723291
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000088
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868262
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266984
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723387
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000088
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868220
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266978
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723380
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000088
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868229
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266979
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723572
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000087
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868139
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266966
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000002
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000002
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723442
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000087
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868205
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266975
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723594
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000087
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868140
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266966
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723579
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000087
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868149
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266967
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723660
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000087
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868112
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266962
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000002
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723621
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000087
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868135
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266965
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723609
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000087
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868138
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266965
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723729
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000087
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868085
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266958
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723642
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000086
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868129
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266964
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723778
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000086
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868070
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266956
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723720
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000086
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868105
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266960
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 switched to CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723727
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000086
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868106
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266961
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723776
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000086
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868091
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266958
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723845
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000085
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868060
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266954
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723740
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000085
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868107
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266961
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723838
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000085
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868058
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266954
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723832
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000085
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868069
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266955
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723882
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000085
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868044
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266952
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723797
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000085
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868089
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266958
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723884
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000085
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868052
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266953
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723799
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000085
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868097
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266959
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723806
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000084
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868102
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266960
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723891
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000084
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868062
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266954
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723836
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000084
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868088
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266957
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723735
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000084
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868139
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266965
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723765
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000084
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868127
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266963
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723784
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000084
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868121
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266962
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723898
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000084
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868064
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266954
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723880
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000083
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868080
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266956
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723953
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000083
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868049
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266952
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723983
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000083
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868035
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266950
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723998
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000083
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868032
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266949
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724110
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000083
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867983
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266942
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724033
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000083
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868023
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266948
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724103
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867993
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266943
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724084
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868003
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266945
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724154
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867971
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266940
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724126
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867986
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266942
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724156
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867971
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266940
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724123
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867991
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266943
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 switched to CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724193
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867956
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266938
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724127
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867990
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266943
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724145
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867977
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266941
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724144
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867974
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266941
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724134
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867981
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266941
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724143
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867977
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266941
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724196
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867950
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266937
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724193
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867952
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266937
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 switched to CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724222
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867937
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266935
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724134
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867973
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266940
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724202
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867933
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266934
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724137
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867963
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266939
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724201
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867935
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266935
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724205
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867932
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266934
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724184
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867946
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266936
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724194
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867941
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266936
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 4
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724200
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.867944
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266936
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201217 switched to CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 switched to CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.724044
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868011
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266946
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723977
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868038
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266950
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723813
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868115
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266961
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723695
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868169
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266969
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723696
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868167
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266968
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723521
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868251
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266980
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723351
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868331
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266992
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 2
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723361
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868330
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.266991
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 switched to CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.723231
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868391
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267000
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 9
+[32m[MONITOR][0m: Thread 201217 switched to CPU 9
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.722872
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868555
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267024
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 14
+[32m[MONITOR][0m: Thread 201217 switched to CPU 14
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.722497
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.868722
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267049
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201217 switched to CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Thread 201220 switched to CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721892
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000082
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869041
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267094
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721354
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869335
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267135
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721372
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000081
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869348
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267135
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721444
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000080
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869333
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267132
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721492
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000079
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869331
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267130
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721509
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000078
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869344
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267131
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721619
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000078
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869315
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267126
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721671
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000077
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869312
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267124
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201217 switched to CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721388
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000077
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869458
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267144
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201217 switched to CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721153
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000076
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869580
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267161
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721273
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000076
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869541
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267154
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721342
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000075
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869521
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267150
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201217 switched to CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721366
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000075
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869529
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267150
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Thread 201220 switched to CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721270
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000074
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869588
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267158
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721075
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000074
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869690
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267171
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720908
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000073
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869779
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267183
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201217 switched to CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720965
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000073
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869768
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267181
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721068
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000072
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869736
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267175
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721115
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000072
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869732
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267174
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000001
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721207
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000071
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869706
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267169
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201217 switched to CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721177
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000071
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869736
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267173
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201217 switched to CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721264
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000070
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869712
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267168
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201217 switched to CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721137
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000070
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869784
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267178
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000001
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721072
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000069
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869834
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267184
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.721100
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000069
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869836
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267183
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720979
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000068
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869908
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267193
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720983
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000068
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869922
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267194
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720881
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000067
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.869983
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267202
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720817
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000067
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870029
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267208
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720815
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000066
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870042
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267209
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 9
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720735
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000066
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870092
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267215
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Thread 201220 switched to CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720674
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000066
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870135
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267220
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720587
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000065
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870189
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267227
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720495
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000065
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870243
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267235
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720398
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000064
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870303
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267242
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720364
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000064
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870332
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267246
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720280
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000064
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870383
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267252
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 4
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720221
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000063
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870424
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267257
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201217 switched to CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.720172
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000063
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870455
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267261
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.719783
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000063
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870664
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267291
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.719447
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000062
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.870849
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267317
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.719094
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000062
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871047
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267344
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.718776
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000062
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871222
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267369
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201217 switched to CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.718676
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871283
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267377
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.718725
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871268
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267374
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.718814
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871237
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267369
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 8
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.718878
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871219
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267366
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 5
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Thread 201220 switched to CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.718966
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000060
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871185
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267361
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201217 switched to CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.718699
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871317
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267380
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.718391
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871471
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267402
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.718015
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871661
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267429
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.717675
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871832
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267454
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.717468
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871939
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267470
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 2
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.717572
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871889
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267463
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 3
+[32m[MONITOR][0m: Thread 201217 switched to CPU 3
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.717609
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871868
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267460
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 3
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.717590
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871877
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267462
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 3
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.717652
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871845
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267457
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Getting process I/O stats for PID 201217
+[32m[MONITOR][0m: Outputting results
+[32m[MONITOR][0m: Thread 201217 is on CPU 3
+[32m[MONITOR][0m: Thread 201220 is on CPU 6
+[32m[MONITOR][0m: Calculating performance ratios
+[32m[MONITOR][0m: Sending data to scheduler
+[32m[MONITOR][0m: Feature 0 (P-Threads): 2.000000
+[32m[MONITOR][0m: Feature 1 (P-Cores): 2.000000
+[32m[MONITOR][0m: Feature 2 (E-Cores): 0.000000
+[32m[MONITOR][0m: Feature 3 (IPC): 3.717735
+[32m[MONITOR][0m: Feature 4 (Cache_Miss_Ratio): 0.000061
+[32m[MONITOR][0m: Feature 5 (Uop_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.871804
+[32m[MONITOR][0m: Feature 7 (MemStallCycle_per_Inst): 0.267452
+[32m[MONITOR][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000
+[32m[MONITOR][0m: Feature 9 (RChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 10 (WChar_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 11 (RBytes_per_Cycle): 0.000000
+[32m[MONITOR][0m: Feature 12 (WBytes_per_Cycle): 0.000000
+danielspaangberg_1of2;6931;5.000477;1;algorithm=base,faithful=yes,bits=1
+[32m[MONITOR][0m: Finalizing monitor
+[32m[MONITOR][0m: PAPI resources cleaned up and shut down.
+[32m[MONITOR][0m: End

@@ -1,0 +1,653 @@
+[33m[SCHEDULER][0m: Setting affinity for PID 207463 to coreset 0-15
+[33m[SCHEDULER][0m: Scheduler bound to coreset 0-15
+[34m[CLASSIFIER][0m: Initializing CJSON classifier
+[34m[CLASSIFIER][0m: Loading CJSON model /srv/homes/ggantsios/eidiko/dynamic-library-interposition-for-monitoring/workload_classifier.json
+[34m[CLASSIFIER][0m: CJSON classifier initialized successfully with 300 trees
+[33m[SCHEDULER][0m: Initializing CSV file
+[33m[SCHEDULER][0m: Initializing core allocation CSV file
+[33m[SCHEDULER][0m: Running, listening on /tmp/scheduler_socket
+[33m[SCHEDULER][0m: No threads, reset: Compute=0,1,2,3,4,5,6,7, IO=8-15, Memory=0,1,2,3,4,5,6,7
+[33m[SCHEDULER][0m: Computed coresets: Compute=0,1,2,3,4,5,6,7, I/O=8-15, Memory=0,1,2,3,4,5,6,7
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 0 entries
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=0
+[33m[SCHEDULER][0m: No threads, reset: Compute=0,1,2,3,4,5,6,7, IO=8-15, Memory=0,1,2,3,4,5,6,7
+[33m[SCHEDULER][0m: Computed coresets: Compute=0,1,2,3,4,5,6,7, I/O=8-15, Memory=0,1,2,3,4,5,6,7
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 0 entries
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=0
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: No threads, reset: Compute=0,1,2,3,4,5,6,7, IO=8-15, Memory=0,1,2,3,4,5,6,7
+[33m[SCHEDULER][0m: Computed coresets: Compute=0,1,2,3,4,5,6,7, I/O=8-15, Memory=0,1,2,3,4,5,6,7
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Compute
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.613333333333333
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.163333333333333
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.223333333333333
+[33m[SCHEDULER][0m: PID 207469 classified as Startup (Compute: 0.6133, I/O: 0.1633, Memory: 0.2233, Threads: 0)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0-31
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0-31
+[33m[SCHEDULER][0m: PID 207469 (startup) affinity set to all cores: 0-31
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=0
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: No threads, reset: Compute=0,1,2,3,4,5,6,7, IO=8-15, Memory=0,1,2,3,4,5,6,7
+[33m[SCHEDULER][0m: Computed coresets: Compute=0,1,2,3,4,5,6,7, I/O=8-15, Memory=0,1,2,3,4,5,6,7
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 1.336901756961518
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.000274134346949
+[34m[CLASSIFIER][0m: Fe    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   8 -
+      -  207470   8 -
+    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+ature 5 (Uop_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 0.882375680416285
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 0.270680553579787
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000357395100536
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000000469287837
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000001734942912
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: I/O
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.026666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.650000000000000
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.323333333333333
+[33m[SCHEDULER][0m: PID 207469 classified as I/O (Compute: 0.0267, I/O: 0.6500, Memory: 0.3233, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 8
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 8
+[33m[SCHEDULER][0m: PID 207469 capped to 8 cores: 8
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=1, Memory=0
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: IO assigned 16 E-cores
+[33m[SCHEDULER][0m: Computed coresets: Compute=0,1,2,3,4,5,6,7, I/O=8-15, Memory=0,1,2,3,4,5,6,7
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.723889506591930
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.094250685187004
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.721263233307087
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 1.109443041560520
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 0.439907229108348
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000107482608080
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000003315427732
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000003705854750
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.006666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.360000000000000
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.633333333333333
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.0067, I/O: 0.3600, Memory: 0.6333, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 8 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Thr    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+eads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.467801994566844
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.156920684937379
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.011448622750906
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 2.730274855271985
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.168926213151889
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000001706073144
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000002107748035
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000002385518969
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.046666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.426666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.526666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.0467, I/O: 0.4267, Memory: 0.5267, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.607778465436758
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.211565633608764
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000369310411320
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 3.747846182395021
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.605313045386656
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000055034618
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000003057738135
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000003276026232
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.186666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.346666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.466666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.1867, I/O: 0.3467, Memory: 0.4667, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.636331894167905
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.210954446792136
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000011913239075
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 3.654344316127141
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.565377874879907
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000001775310
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000002807797280
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000002999163978
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.186666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.346666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.466666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.1867, I/O: 0.3467, Memory: 0.4667, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.566719898464834
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.211804841935995
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000000794215938
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 4.123906536435272
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.766439649037036
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000000118354
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000002289800187
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000002440728255
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.186666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.346666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.466666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.1867, I/O: 0.3467, Memory: 0.4667, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SC    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+HEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.642289045643301
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.210574392933271
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000000025619869
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 3.630633100045313
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.555450828014110
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000000003818
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000002805780864
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000002988638000
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.186666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.346666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.466666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.1867, I/O: 0.3467, Memory: 0.4667, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.594122095765056
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.211621232054713
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000000001707991
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 3.925387486380545
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.681650592658823
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000000000255
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000002516411468
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000002680363239
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.186666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.346666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.466666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.1867, I/O: 0.3467, Memory: 0.4667, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0,     PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.592463314847590
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.211754779540179
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000000000055096
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 3.934009671572271
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.685352730828221
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000000000008
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000002516868497
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000002680846414
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.186666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.346666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.466666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.1867, I/O: 0.3467, Memory: 0.4667, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.617085580974754
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.210479171140836
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000000000003673
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 3.772873131694879
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.616409951145654
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000000000001
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000002564105837
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000002731161226
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.186666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.346666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.466666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.1867, I/O: 0.3467, Memory: 0.4667, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+ 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.627987341718589
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.210239250025699
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000000000000118
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 3.713942432796452
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.591084886974840
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000002639750949
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000002811734723
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.186666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.346666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.466666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.1867, I/O: 0.3467, Memory: 0.4667, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.630514214664835
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.213019256162191
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000000000000008
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 3.681022157885676
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.577054924537197
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000002969355397
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000003162813400
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.186666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.346666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.466666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.1867, I    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+/O: 0.3467, Memory: 0.4667, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.603702868261147
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.214110643780593
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 3.839987544188889
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.645091532473765
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000002961417064
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000003154357873
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.186666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.346666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.466666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.1867, I/O: 0.3467, Memory: 0.4667, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.552723750858597
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.219259498661409
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 4.152448864368089
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.778966947418794
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000002808817653
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000002991816378
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.186666666666667
+[34m[CLASS    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
+IFIER][0m:   Prob_I/O: 0.346666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.466666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.1867, I/O: 0.3467, Memory: 0.4667, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.586304854875649
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.215670487511419
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 3.998063572313764
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.712858850279171
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000002763571984
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000002943622886
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: predict_rf
+[34m[CLASSIFIER][0m: 
+--- Workload Classification (CJSON) ---
+[34m[CLASSIFIER][0m:   Predicted Class: Memory
+[34m[CLASSIFIER][0m:   Prob_Compute: 0.186666666666667
+[34m[CLASSIFIER][0m:   Prob_I/O: 0.346666666666667
+[34m[CLASSIFIER][0m:   Prob_Memory: 0.466666666666667
+[33m[SCHEDULER][0m: PID 207469 classified as Memory (Compute: 0.1867, I/O: 0.3467, Memory: 0.4667, Threads: 1)
+[33m[SCHEDULER][0m: Setting affinity for PID 207469 to coreset 0
+[33m[SCHEDULER][0m: Setting affinity for PID 207470 to coreset 0
+[33m[SCHEDULER][0m: PID 207469 capped to 16 cores: 0
+[33m[SCHEDULER][0m: Verifying affinity for PID 207469:
+[33m[SCHEDULER][0m: Updated thread counts: Compute=0, I/O=0, Memory=1
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Adding PID 207469 to queue
+[33m[SCHEDULER][0m: Memory assigned 16 additional P-cores
+[33m[SCHEDULER][0m: Updated: Compute= (0), IO= (0), Memory=0-15 (16)
+[33m[SCHEDULER][0m: Computed coresets: Compute=, I/O=, Memory=0-15
+[33m[SCHEDULER][0m: Logging core allocation to CSV
+[33m[SCHEDULER][0m: Processing queue with 1 entries
+[34m[CLASSIFIER][0m: cjson classify_workload_cjson
+[34m[CLASSIFIER][0m: Feature 0 (P-Threads): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 1 (P-Cores): 1.000000000000000
+[34m[CLASSIFIER][0m: Feature 2 (E-Cores): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 3 (IPC): 0.616364668658830
+[34m[CLASSIFIER][0m: Feature 4 (Cache_Miss_Ratio): 0.211936590904867
+[34m[CLASSIFIER][0m: Feature 5 (Uop_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 6 (MemStallCycle_per_Mem_Inst): 3.666470519693158
+[34m[CLASSIFIER][0m: Feature 7 (MemStallCycle_per_Inst): 1.569202543224278
+[34m[CLASSIFIER][0m: Feature 8 (Fault_Rate_per_mem_instr): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 9 (RChar_per_Cycle): 0.000003362683258
+[34m[CLASSIFIER][0m: Feature 10 (WChar_per_Cycle): 0.000003581767167
+[34m[CLASSIFIER][0m: Feature 11 (RBytes_per_Cycle): 0.000000000000000
+[34m[CLASSIFIER][0m: Feature 12 (WBytes_per_Cycle): 0.00000000000    PID     TID PSR CMD
+ 207469       -   - ./highmiss_loop
+      -  207469   0 -
+      -  207470   0 -
