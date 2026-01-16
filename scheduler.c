@@ -15,7 +15,11 @@
 #include <signal.h>
 #include <math.h>
 #include "monitor.h"
-#include "libclassifier.h"
+#include <stdint.h>
+#include "cJSON.h"
+//#include "libclassifier.h"
+
+
 
 #define SOCKET_PATH "/tmp/scheduler_socket"
 #define CSV_FILE "classifier_val.csv"
@@ -39,11 +43,107 @@
 
 
 
+typedef struct {
+    double intercept;
+    double w_cycles_per_ms;
+    double w_ipc;
+    double w_cmr;
+    double w_mspm;
+    double w_mspi;
+    int loaded;
+} LinearModel5;
 
+static double clamp_nonneg(double v) { return (v < 0.0) ? 0.0 : v; }
+static int json_features_ok(const cJSON *root);
+static double predict5(const LinearModel5 *m,
+                       double cycles_per_ms,
+                       double ipc,
+                       double cmr,
+                       double mspm,
+                       double mspi)
+{
+    double y = m->intercept
+             + m->w_cycles_per_ms * cycles_per_ms
+             + m->w_ipc          * ipc
+             + m->w_cmr          * cmr
+             + m->w_mspm         * mspm
+             + m->w_mspi         * mspi;
+    return clamp_nonneg(y);
+}
 
+static char *read_entire_file(const char *path) {
+    FILE *f = fopen(path, "rb");
+    if (!f) return NULL;
+    if (fseek(f, 0, SEEK_END) != 0) { fclose(f); return NULL; }
+    long n = ftell(f);
+    if (n < 0) { fclose(f); return NULL; }
+    rewind(f);
 
+    char *buf = (char*)malloc((size_t)n + 1);
+    if (!buf) { fclose(f); return NULL; }
 
+    size_t got = fread(buf, 1, (size_t)n, f);
+    fclose(f);
+    if (got != (size_t)n) { free(buf); return NULL; }
 
+    buf[n] = '\0';
+    return buf;
+}
+
+static int json_get_double(const cJSON *obj, const char *key, double *out) {
+    const cJSON *it = cJSON_GetObjectItemCaseSensitive((cJSON*)obj, key);
+    if (!cJSON_IsNumber(it)) return -1;
+    *out = it->valuedouble;
+    return 0;
+}
+
+static int load_linear_model5(const char *json_path, LinearModel5 *out) {
+    memset(out, 0, sizeof(*out));
+
+    char *txt = read_entire_file(json_path);
+    if (!txt) {
+        SCHEDULER_PERROR("Failed to read model file %s\n", json_path);
+        return -1;
+    }
+
+    cJSON *root = cJSON_Parse(txt);
+    free(txt);
+    if (!root) {
+        SCHEDULER_PERROR("Failed to parse JSON in %s\n", json_path);
+        return -1;
+    }
+    if (!json_features_ok(root)) {
+        SCHEDULER_PERROR("Model %s: 'features' does not match expected set\n", json_path);
+        cJSON_Delete(root);
+        return -1;
+    }
+
+    if (json_get_double(root, "intercept", &out->intercept) != 0) goto bad;
+
+    cJSON *w = cJSON_GetObjectItemCaseSensitive(root, "weights");
+    if (!cJSON_IsObject(w)) goto bad;
+
+    if (json_get_double(w, "cycles_per_ms", &out->w_cycles_per_ms) != 0) goto bad;
+    if (json_get_double(w, "IPC",           &out->w_ipc)          != 0) goto bad;
+    if (json_get_double(w, "Cache_Miss_Ratio", &out->w_cmr)       != 0) goto bad;
+    if (json_get_double(w, "MemStall_per_Mem", &out->w_mspm)      != 0) goto bad;
+    if (json_get_double(w, "MemStall_per_Inst",&out->w_mspi)      != 0) goto bad;
+
+    out->loaded = 1;
+    cJSON_Delete(root);
+    return 0;
+
+bad:
+    SCHEDULER_PERROR("Model %s missing expected fields/weights\n", json_path);
+    cJSON_Delete(root);
+    return -1;
+}
+
+static LinearModel5 g_model_P;
+static LinearModel5 g_model_E;
+
+static int g_last_on_p = 1;          // default assumption
+static const double HYST = 0.15;     // 15%
 
 typedef struct {
     char compute_coreset[256];
@@ -61,6 +161,8 @@ typedef struct {
     int has_last_used;
     int startup_flag;
     char predicted_class[16];
+    int last_on_p;   // 1 = currently considered on P, 0 = on E
+    int has_last_on_p;
 } QueueEntry;
 
 static QueueEntry queue[MAX_QUEUE_SIZE];
@@ -69,6 +171,22 @@ static int compute_threads = 0;
 static int io_threads = 0;
 static int memory_threads = 0;
 static DynamicCoreMasks prev_masks = { {0}, {0}, {0} };
+
+
+
+#define P_CORESET   "0-7"
+#define E_CORESET   "8-15"
+#define ALL_CORESET "0-15"
+
+static int g_phase_is_P = 1;
+static uint64_t g_next_switch_ns = 0;
+
+static inline uint64_t nsec_now(void) {
+    struct timespec ts;
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+    return (uint64_t)ts.tv_sec * 1000000000ull + (uint64_t)ts.tv_nsec;
+}
+
 
 // Safe process existence check
 static int is_process_alive(pid_t pid) {
@@ -87,7 +205,7 @@ void get_current_core(pid_t pid, int *core, int *is_pcore) {
     for (int i = 0; i < CPU_SETSIZE; i++) {
         if (CPU_ISSET(i, &cpuset)) {
             *core = i;
-            *is_pcore = (i < 16) ? 1 : 0; // Assume 0-15 are P-cores, 16-31 are E-cores
+            *is_pcore = (i < 8) ? 1 : 0; // Assume 0-7 are P-cores, 8-16 are E-cores
             return;
         }
     }
@@ -112,6 +230,8 @@ static void init_queue_entry(QueueEntry *entry) {
     memset(&entry->last_used, 0, sizeof(MonitorData));
     entry->has_last_used = 0;
     entry->startup_flag = 0;
+    entry->last_on_p = 1;
+    entry->has_last_on_p = 0;
 }
 
 // Safe queue entry removal
@@ -225,9 +345,9 @@ static void compute_dynamic_coresets(DynamicCoreMasks *masks) {
         return;
     }
 
-    int pcores[16] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-    int ecores[16] = {16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31};
-    int pcore_count = 16, ecore_count = 16;
+    int pcores[8] = {0, 1, 2, 3, 4, 5, 6, 7};
+    int ecores[8] = {9, 10 ,11, 12, 13, 14, 15};
+    int pcore_count = 8, ecore_count = 8;
     int compute_cores[64] = {0}, io_cores[64] = {0}, memory_cores[64] = {0};
     int compute_core_count = 0, io_core_count = 0, memory_core_count = 0;
 
@@ -453,6 +573,33 @@ static void compute_dynamic_coresets(DynamicCoreMasks *masks) {
     strcpy(prev_masks.memory_coreset, masks->memory_coreset);
 }
 
+static int json_features_ok(const cJSON *root) {
+    static const char *need[5] = {
+        "cycles_per_ms", "IPC", "Cache_Miss_Ratio", "MemStall_per_Mem", "MemStall_per_Inst"
+    };
+
+    const cJSON *arr = cJSON_GetObjectItemCaseSensitive((cJSON*)root, "features");
+    if (!cJSON_IsArray(arr)) return 0;
+
+    // check each required feature appears at least once
+    for (int k = 0; k < 5; k++) {
+        int found = 0;
+        cJSON *it = NULL;
+        cJSON_ArrayForEach(it, arr) {
+            if (cJSON_IsString(it) && it->valuestring && strcmp(it->valuestring, need[k]) == 0) {
+                found = 1;
+                break;
+            }
+        }
+        if (!found) return 0;
+    }
+    return 1;
+}
+
+
+
+
+
 static int init_core_allocation_csv() {
     SCHEDULER_PRINTF("Initializing core allocation CSV file\n");
     FILE *fp = fopen(CORE_ALLOCATION_CSV, "w");
@@ -642,7 +789,7 @@ void verify_affinity(pid_t pid) {
 void schedule_process(pid_t pid, MonitorData data, int startup_flag) {
     SCHEDULER_PRINTF("Scheduling PID %d (startup=%d)\n", pid, startup_flag);
     if (startup_flag) {
-        set_affinity_for_all_threads(pid, "0-16");
+        set_affinity_for_all_threads(pid, ALL_CORESET);
         return;
     }
 }
@@ -672,24 +819,20 @@ void write_to_csv(const MonitorData *data, long class_time_cjson, const char *pr
     fclose(fp);
 }
 
+
 static int add_to_queue(pid_t pid, MonitorData data, int startup_flag) {
-    SCHEDULER_PRINTF("Adding PID %d to queue\n", pid);
-    
     if (!is_process_alive(pid)) {
-        SCHEDULER_PRINTF("PID %d does not exist, not adding to queue\n", pid);
+        SCHEDULER_PRINTF("PID %d does not exist, not adding/updating queue\n", pid);
         return -1;
     }
 
+    // Update existing entry
     for (int i = 0; i < queue_size; i++) {
         if (queue[i].pid == pid) {
-            if (!is_process_alive(pid)) {
-                SCHEDULER_PRINTF("PID %d found in queue but dead, removing\n", pid);
-                remove_queue_entry(i);
-                break;
-            }
-            
+            SCHEDULER_PRINTF("Updating PID %d in queue\n", pid);
+
             if (queue[i].history_count >= queue[i].history_capacity) {
-                int new_capacity = queue[i].history_capacity == 0 ? 4 : queue[i].history_capacity * 2;
+                int new_capacity = (queue[i].history_capacity == 0) ? 4 : queue[i].history_capacity * 2;
                 MonitorData *new_history = realloc(queue[i].history, new_capacity * sizeof(MonitorData));
                 if (!new_history) {
                     SCHEDULER_PERROR("Failed to allocate history for PID %d\n", pid);
@@ -698,38 +841,110 @@ static int add_to_queue(pid_t pid, MonitorData data, int startup_flag) {
                 queue[i].history = new_history;
                 queue[i].history_capacity = new_capacity;
             }
+
             queue[i].history[queue[i].history_count++] = data;
             queue[i].current_data = data;
+
+            // IMPORTANT: do NOT keep re-setting startup_flag to 1 forever.
+            // If startup_flag passed in is 1 only on first sample, fine.
+            // Otherwise consider: queue[i].startup_flag &= startup_flag; or just ignore updates.
             queue[i].startup_flag = startup_flag;
+
+            // DO NOT reset last_on_p / has_last_on_p here (keeps hysteresis stable)
             return 0;
         }
     }
 
+    // Add new entry
     if (queue_size >= MAX_QUEUE_SIZE) {
         SCHEDULER_PERROR("Queue full, cannot add PID %d\n", pid);
         return -1;
     }
-    
-    if (!is_process_alive(pid)) {
-        SCHEDULER_PRINTF("PID %d died during add operation, not adding\n", pid);
-        return -1;
-    }
+
+    SCHEDULER_PRINTF("Adding PID %d to queue\n", pid);
 
     init_queue_entry(&queue[queue_size]);
     queue[queue_size].pid = pid;
+
     queue[queue_size].history = malloc(4 * sizeof(MonitorData));
     if (!queue[queue_size].history) {
         SCHEDULER_PERROR("Failed to allocate history for PID %d\n", pid);
         return -1;
     }
+
     queue[queue_size].history_capacity = 4;
     queue[queue_size].history[0] = data;
     queue[queue_size].history_count = 1;
     queue[queue_size].current_data = data;
     queue[queue_size].startup_flag = startup_flag;
+
+    // hysteresis state should already be initialized by init_queue_entry()
     queue_size++;
     return 0;
 }
+
+
+
+// static int add_to_queue(pid_t pid, MonitorData data, int startup_flag) {
+//     SCHEDULER_PRINTF("Adding PID %d to queue\n", pid);
+    
+//     if (!is_process_alive(pid)) {
+//         SCHEDULER_PRINTF("PID %d does not exist, not adding to queue\n", pid);
+//         return -1;
+//     }
+
+//     for (int i = 0; i < queue_size; i++) {
+//         if (queue[i].pid == pid) {
+//             if (!is_process_alive(pid)) {
+//                 SCHEDULER_PRINTF("PID %d found in queue but dead, removing\n", pid);
+//                 remove_queue_entry(i);
+//                 break;
+//             }
+            
+//             if (queue[i].history_count >= queue[i].history_capacity) {
+//                 int new_capacity = queue[i].history_capacity == 0 ? 4 : queue[i].history_capacity * 2;
+//                 MonitorData *new_history = realloc(queue[i].history, new_capacity * sizeof(MonitorData));
+//                 if (!new_history) {
+//                     SCHEDULER_PERROR("Failed to allocate history for PID %d\n", pid);
+//                     return -1;
+//                 }
+//                 queue[i].history = new_history;
+//                 queue[i].history_capacity = new_capacity;
+//             }
+//             queue[i].history[queue[i].history_count++] = data;
+//             queue[i].current_data = data;
+//             queue[i].startup_flag = startup_flag;
+//             queue[i].last_on_p = 1;
+//             queue[i].has_last_on_p = 0;
+//             return 0;
+//         }
+//     }
+
+//     if (queue_size >= MAX_QUEUE_SIZE) {
+//         SCHEDULER_PERROR("Queue full, cannot add PID %d\n", pid);
+//         return -1;
+//     }
+    
+//     if (!is_process_alive(pid)) {
+//         SCHEDULER_PRINTF("PID %d died during add operation, not adding\n", pid);
+//         return -1;
+//     }
+
+//     init_queue_entry(&queue[queue_size]);
+//     queue[queue_size].pid = pid;
+//     queue[queue_size].history = malloc(4 * sizeof(MonitorData));
+//     if (!queue[queue_size].history) {
+//         SCHEDULER_PERROR("Failed to allocate history for PID %d\n", pid);
+//         return -1;
+//     }
+//     queue[queue_size].history_capacity = 4;
+//     queue[queue_size].history[0] = data;
+//     queue[queue_size].history_count = 1;
+//     queue[queue_size].current_data = data;
+//     queue[queue_size].startup_flag = startup_flag;
+//     queue_size++;
+//     return 0;
+// }
 
 static void compute_weighted_ratios(pid_t pid, MonitorData *data, MonitorData *history, 
                                    int history_count, MonitorData *last_used, int has_last_used) {
@@ -803,15 +1018,129 @@ static void compute_weighted_ratios(pid_t pid, MonitorData *data, MonitorData *h
     }
 }
 
+
+// linear models
+static double dot10(const double w[10], const double x[10]) {
+    double s = 0.0;
+    for (int i = 0; i < 10; i++) s += w[i] * x[i];
+    return s;
+}
+
+static double predict_inst_per_ms_linear_P(const double x[10]) {
+    // TODO: paste learned coefficients here
+    static const double b = 0.0;
+    static const double w[10] = {0};
+    return b + dot10(w, x);
+}
+
+static double predict_inst_per_ms_linear_E(const double x[10]) {
+    // TODO: paste learned coefficients here
+    static const double b = 0.0;
+    static const double w[10] = {0};
+    return b + dot10(w, x);
+}
+
+static int tree_prefers_P(const MonitorData *d) {
+    const double cmr = d->ratios.Cache_Miss_Ratio;
+    const double mspi = d->ratios.MemStallCycle_per_Inst;
+    const double ipc  = d->ratios.IPC;
+
+    if (cmr > 0.20 && mspi > 0.30) return 1;
+    if (ipc < 0.50 && mspi > 0.25) return 1;
+    return 0;
+}
+
+
+
+
+static const char *choose_placement_coreset_model(MonitorData *d,int *last_on_p,int *has_last_on_p)
+{
+    const double dt_ms = d->exec_time_ms;
+    const double cycles = (double)d->total_values[2]; // core_cycles
+    const double cycles_per_ms = (dt_ms > 1e-9) ? (cycles / dt_ms) : 0.0;
+
+    const double ipc  = d->ratios.IPC;
+    const double cmr  = d->ratios.Cache_Miss_Ratio;
+    const double mspm = d->ratios.MemStallCycle_per_Mem_Inst;
+    const double mspi = d->ratios.MemStallCycle_per_Inst;
+    SCHEDULER_PRINTF("PID features: cycles/ms=%.2f IPC=%.4f CMR=%.6f MSPM=%.4f MSPI=%.4f -> yP=%.2f yE=%.2f last=%c\n",
+                 cycles_per_ms, ipc, cmr, mspm, mspi, yP, yE, (*last_on_p ? 'P' : 'E'));
+    if (!isfinite(ipc) || !isfinite(cmr) || !isfinite(mspm) || !isfinite(mspi) ||
+        !isfinite(cycles_per_ms) || dt_ms <= 0.0) {
+        SCHEDULER_PRINTF("Non-finite features (or dt_ms<=0), defaulting to ALL_CORESET\n", 0);
+
+        // optional: store something meaningful for logging
+        d->compute_prob_cjson = 0.0;
+        d->io_prob_cjson = 0.0;
+        d->memory_prob_cjson = 0.0;
+
+        return ALL_CORESET;
+    }
+
+    double yP = predict5(&g_model_P, cycles_per_ms, ipc, cmr, mspm, mspi);
+    double yE = predict5(&g_model_E, cycles_per_ms, ipc, cmr, mspm, mspi);
+
+    // Save predictions (repurpose fields; see below)
+    d->compute_prob_cjson = yP;  // store yhat_P
+    d->io_prob_cjson = yE;       // store yhat_E
+    d->memory_prob_cjson = 0.0;  // unused, keep 0
+
+    // hysteresis
+    if (!*has_last_on_p) {
+        *last_on_p = (yP >= yE) ? 1 : 0;
+        *has_last_on_p = 1;
+    }
+
+    const char *chosen;
+    if (*last_on_p == 0) {
+        // currently on E: switch only if P clearly better
+        chosen = (yP > (1.0 + HYST) * yE) ? P_CORESET : E_CORESET;
+    } else {
+        // currently on P: switch only if E clearly better
+        chosen = (yE > (1.0 + HYST) * yP) ? E_CORESET : P_CORESET;
+    }
+
+    *last_on_p = (chosen == P_CORESET);
+    return chosen;
+}
+
+// static const char *choose_placement_coreset(const MonitorData *d) {
+//     double x[10] = {
+//         d->ratios.IPC,
+//         d->ratios.Cache_Miss_Ratio,
+//         d->ratios.Uop_per_Cycle,
+//         d->ratios.MemStallCycle_per_Mem_Inst,
+//         d->ratios.MemStallCycle_per_Inst,
+//         d->ratios.Fault_Rate_per_mem_instr,
+//         d->ratios.RChar_per_Cycle,
+//         d->ratios.WChar_per_Cycle,
+//         d->ratios.RBytes_per_Cycle,
+//         d->ratios.WBytes_per_Cycle
+//     };
+
+//     double yP = predict_inst_per_ms_linear_P(x);
+//     double yE = predict_inst_per_ms_linear_E(x);
+
+//     int tP = tree_prefers_P(d);
+
+//     const double eps = 0.02 * (fabs(yP) + fabs(yE) + 1e-9);
+
+//     if (yP > yE + eps) return P_CORESET;
+//     if (yE > yP + eps) return E_CORESET;
+//     return tP ? P_CORESET : E_CORESET;
+// }
+
+
+
+
+
 static void process_queue(DynamicCoreMasks *masks) {
     SCHEDULER_PRINTF("Processing queue with %d entries\n", queue_size);
-    
-    int temp_compute_threads = 0, temp_io_threads = 0, temp_memory_threads = 0;
-    int i = 0;
 
+    int i = 0;
     while (i < queue_size) {
         pid_t pid = queue[i].pid;
-        
+
         if (!is_process_alive(pid)) {
             SCHEDULER_PRINTF("Process PID %d died, removing from queue\n", pid);
             remove_queue_entry(i);
@@ -824,20 +1153,14 @@ static void process_queue(DynamicCoreMasks *masks) {
         if (queue[i].history_count > 0) {
             int latest_idx = queue[i].history_count - 1;
             data.pthread_count = queue[i].history[latest_idx].pthread_count;
-            data.pcore_count = queue[i].history[latest_idx].pcore_count;
-            data.ecore_count = queue[i].history[latest_idx].ecore_count;
-        }
-
-        if (!is_process_alive(pid)) {
-            SCHEDULER_PRINTF("Process PID %d died before classification, removing\n", pid);
-            remove_queue_entry(i);
-            continue;
+            data.pcore_count   = queue[i].history[latest_idx].pcore_count;
+            data.ecore_count   = queue[i].history[latest_idx].ecore_count;
         }
 
         if (queue[i].history_count > 0 || queue[i].has_last_used) {
-            compute_weighted_ratios(pid, &data, queue[i].history, 
-                                   queue[i].history_count, &queue[i].last_used, 
-                                   queue[i].has_last_used);
+            compute_weighted_ratios(pid, &data, queue[i].history,
+                                    queue[i].history_count, &queue[i].last_used,
+                                    queue[i].has_last_used);
         }
 
         if (!is_process_alive(pid)) {
@@ -847,93 +1170,128 @@ static void process_queue(DynamicCoreMasks *masks) {
         }
 
         struct timespec start_time, end_time;
-        long class_time_cjson = 0;
-
         clock_gettime(CLOCK_MONOTONIC, &start_time);
-        classify_workload_cjson(&data);
         clock_gettime(CLOCK_MONOTONIC, &end_time);
-        class_time_cjson = (end_time.tv_sec - start_time.tv_sec) * 1000000 +
-                           (end_time.tv_nsec - start_time.tv_nsec) / 1000;
+        long class_time_cjson = (end_time.tv_sec - start_time.tv_sec) * 1000000
+                              + (end_time.tv_nsec - start_time.tv_nsec) / 1000;
 
-        if (!is_process_alive(pid)) {
-            SCHEDULER_PRINTF("Process PID %d died before scheduling, removing\n", pid);
-            remove_queue_entry(i);
-            continue;
-        }
+        const char *predicted_class = "N/A";
+        const char *chosen_coreset = NULL;
 
-        const char *predicted_class;
         if (startup_flag) {
-            predicted_class = "Startup";
-        } else if (data.compute_prob_cjson > data.io_prob_cjson && 
-                   data.compute_prob_cjson > data.memory_prob_cjson) {
-            temp_compute_threads += data.thread_count;
-            predicted_class = "Compute";
-        } else if (data.io_prob_cjson > data.compute_prob_cjson && 
-                   data.io_prob_cjson > data.memory_prob_cjson) {
-            temp_io_threads += data.thread_count;
-            predicted_class = "I/O";
+            chosen_coreset = ALL_CORESET;
         } else {
-            temp_memory_threads += data.thread_count;
-            predicted_class = "Memory";
+            chosen_coreset = choose_placement_coreset_model(
+                &data,
+                &queue[i].last_on_p,
+                &queue[i].has_last_on_p
+            );
         }
-        SCHEDULER_PRINTF("PID %d classified as %s (Compute: %.4f, I/O: %.4f, Memory: %.4f, Threads: %d)\n",
-                         pid, predicted_class, data.compute_prob_cjson, data.io_prob_cjson, data.memory_prob_cjson, data.thread_count);
-
-        // Check if class has changed or startup_flag is set
-        int class_changed = !queue[i].has_last_used || 
-                           strcmp(queue[i].predicted_class, predicted_class) != 0 ||
-                           startup_flag;
 
         write_to_csv(&data, class_time_cjson, predicted_class);
 
         if (is_process_alive(pid)) {
-            // Handle affinity
-            if (startup_flag) {
-                set_affinity_for_all_threads(pid, "0-31");
-                SCHEDULER_PRINTF("PID %d (startup) affinity set to all cores: 0-31\n", pid);
-            } else {
-                int max_cores = MAX(data.thread_count, 1); // Ensure at least 1 core
-                char capped_coreset[256] = "";
-                int core_count = 0;
-                int cores[64];
-                const char *selected_coreset;
+            set_affinity_for_all_threads(pid, chosen_coreset);
+            SCHEDULER_PRINTF("PID %d placement -> %s\n", pid, chosen_coreset);
+            verify_affinity(pid);
 
-                // Select coreset based on workload type
-                if (strcmp(predicted_class, "Compute") == 0) {
-                    selected_coreset = masks->compute_coreset[0] ? masks->compute_coreset : COMPUTE_CORESET;
-                } else if (strcmp(predicted_class, "I/O") == 0) {
-                    selected_coreset = masks->io_coreset[0] ? masks->io_coreset : IO_CORESET;
-                } else {
-                    selected_coreset = masks->memory_coreset[0] ? masks->memory_coreset : MEMORY_CORESET;
-                }
+            queue[i].startup_flag = 0;
+            queue[i].last_used = data;
+            queue[i].has_last_used = 1;
+            queue[i].current_data = data;
+            queue[i].history_count = 0;
 
-                parse_coreset(selected_coreset, cores, &core_count);
-                if (core_count == 0) {
-                    SCHEDULER_PERROR("Failed to generate capped coreset for PID %d: no valid cores in %s\n", pid, selected_coreset);
-                    // Fallback to default coresets
-                    if (strcmp(predicted_class, "Compute") == 0) {
-                        selected_coreset = COMPUTE_CORESET;
-                    } else if (strcmp(predicted_class, "I/O") == 0) {
-                        selected_coreset = IO_CORESET;
-                    } else {
-                        selected_coreset = MEMORY_CORESET;
-                    }
-                    parse_coreset(selected_coreset, cores, &core_count);
-                    if (core_count == 0) {
-                        SCHEDULER_PERROR("Fallback coreset %s invalid for PID %d, using core 0\n", selected_coreset, pid);
-                        strcpy(capped_coreset, "0");
-                        core_count = 1;
-                    } else {
-                        cores_to_string(cores, MIN(core_count, max_cores), capped_coreset, sizeof(capped_coreset));
-                    }
-                } else {
-                    cores_to_string(cores, MIN(core_count, max_cores), capped_coreset, sizeof(capped_coreset));
-                }
+            strncpy(queue[i].predicted_class, predicted_class,
+                    sizeof(queue[i].predicted_class) - 1);
+            queue[i].predicted_class[sizeof(queue[i].predicted_class) - 1] = '\0';
 
-                set_affinity_for_all_threads(pid, capped_coreset);
-                SCHEDULER_PRINTF("PID %d capped to %d cores: %s\n", pid, core_count, capped_coreset);
-                verify_affinity(pid);
-            }
+            i++;
+        } else {
+            SCHEDULER_PRINTF("Process PID %d died after processing, removing\n", pid);
+            remove_queue_entry(i);
+        }
+    }
+}
+
+
+
+
+
+
+
+        // const char *predicted_class;
+        // if (startup_flag) {
+        //     predicted_class = "Startup";
+        // } else if (data.compute_prob_cjson > data.io_prob_cjson && 
+        //            data.compute_prob_cjson > data.memory_prob_cjson) {
+        //     temp_compute_threads += data.thread_count;
+        //     predicted_class = "Compute";
+        // } else if (data.io_prob_cjson > data.compute_prob_cjson && 
+        //            data.io_prob_cjson > data.memory_prob_cjson) {
+        //     temp_io_threads += data.thread_count;
+        //     predicted_class = "I/O";
+        // } else {
+        //     temp_memory_threads += data.thread_count;
+        //     predicted_class = "Memory";
+        // }
+        // SCHEDULER_PRINTF("PID %d classified as %s (Compute: %.4f, I/O: %.4f, Memory: %.4f, Threads: %d)\n",
+        //                  pid, predicted_class, data.compute_prob_cjson, data.io_prob_cjson, data.memory_prob_cjson, data.thread_count);
+
+        // // Check if class has changed or startup_flag is set
+        // int class_changed = !queue[i].has_last_used || 
+        //                    strcmp(queue[i].predicted_class, predicted_class) != 0 ||
+        //                    startup_flag;
+
+        // write_to_csv(&data, class_time_cjson, predicted_class);
+
+        // if (is_process_alive(pid)) {
+        //     // Handle affinity
+        //     if (startup_flag) {
+        //         set_affinity_for_all_threads(pid, ALL_CORESET);
+        //         SCHEDULER_PRINTF("PID %d (startup) affinity set to all cores: 0-31\n", pid);
+        //     } else {
+        //         int max_cores = MAX(data.thread_count, 1); // Ensure at least 1 core
+        //         char capped_coreset[256] = "";
+        //         int core_count = 0;
+        //         int cores[64];
+        //         const char *selected_coreset;
+
+        //         // Select coreset based on workload type
+        //         if (strcmp(predicted_class, "Compute") == 0) {
+        //             selected_coreset = masks->compute_coreset[0] ? masks->compute_coreset : COMPUTE_CORESET;
+        //         } else if (strcmp(predicted_class, "I/O") == 0) {
+        //             selected_coreset = masks->io_coreset[0] ? masks->io_coreset : IO_CORESET;
+        //         } else {
+        //             selected_coreset = masks->memory_coreset[0] ? masks->memory_coreset : MEMORY_CORESET;
+        //         }
+
+        //         parse_coreset(selected_coreset, cores, &core_count);
+        //         if (core_count == 0) {
+        //             SCHEDULER_PERROR("Failed to generate capped coreset for PID %d: no valid cores in %s\n", pid, selected_coreset);
+        //             // Fallback to default coresets
+        //             if (strcmp(predicted_class, "Compute") == 0) {
+        //                 selected_coreset = COMPUTE_CORESET;
+        //             } else if (strcmp(predicted_class, "I/O") == 0) {
+        //                 selected_coreset = IO_CORESET;
+        //             } else {
+        //                 selected_coreset = MEMORY_CORESET;
+        //             }
+        //             parse_coreset(selected_coreset, cores, &core_count);
+        //             if (core_count == 0) {
+        //                 SCHEDULER_PERROR("Fallback coreset %s invalid for PID %d, using core 0\n", selected_coreset, pid);
+        //                 strcpy(capped_coreset, "0");
+        //                 core_count = 1;
+        //             } else {
+        //                 cores_to_string(cores, MIN(core_count, max_cores), capped_coreset, sizeof(capped_coreset));
+        //             }
+        //         } else {
+        //             cores_to_string(cores, MIN(core_count, max_cores), capped_coreset, sizeof(capped_coreset));
+        //         }
+
+        //         set_affinity_for_all_threads(pid, capped_coreset);
+        //         SCHEDULER_PRINTF("PID %d capped to %d cores: %s\n", pid, core_count, capped_coreset);
+        //         verify_affinity(pid);
+        //     }
 
             // Commented out priority setting logic
             // if (class_changed) {
@@ -1003,32 +1361,13 @@ static void process_queue(DynamicCoreMasks *masks) {
             //         closedir(dir);
             //     }
             // }
-        }
+        //}
 
-        if (is_process_alive(pid)) {
-            queue[i].startup_flag = 0; // Mark as processed after startup
-            queue[i].last_used = data;
-            queue[i].has_last_used = 1;
-            queue[i].current_data = data;
-            queue[i].history_count = 0; // Reset history after processing
-            strncpy(queue[i].predicted_class, predicted_class, sizeof(queue[i].predicted_class) - 1);
-            i++;
-        } else {
-            SCHEDULER_PRINTF("Process PID %d died after processing, removing\n", pid);
-            remove_queue_entry(i);
-        }
-    }
 
-    compute_threads = temp_compute_threads;
-    io_threads = temp_io_threads;
-    memory_threads = temp_memory_threads;
-    SCHEDULER_PRINTF("Updated thread counts: Compute=%d, I/O=%d, Memory=%d\n",
-                     compute_threads, io_threads, memory_threads);
-}
 
 void cleanup_scheduler(int server_fd) {
     SCHEDULER_PRINTF("Cleaning up scheduler\n");
-    cleanup_classifier_cjson();
+    //cleanup_classifier_cjson();
 
     if (server_fd >= 0) {
         close(server_fd);
@@ -1039,6 +1378,13 @@ void cleanup_scheduler(int server_fd) {
     }
     queue_size = 0;
 }
+
+
+
+
+
+
+
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
@@ -1053,10 +1399,24 @@ int main(int argc, char *argv[]) {
     set_affinity(getpid(), argv[1]);
     SCHEDULER_PRINTF("Scheduler bound to coreset %s\n", argv[1]);
 
-    if (init_classifier_cjson(MODEL_PATH_CJSON) != 0) {
-        SCHEDULER_PERROR("Failed to initialize CJSON classifier\n");
-        return 1;
-    }
+    // if (init_classifier_cjson(MODEL_PATH_CJSON) != 0) {
+    //     SCHEDULER_PERROR("Failed to initialize CJSON classifier\n");
+    //     return 1;
+    // }
+
+    if (load_linear_model5("model_P.json", &g_model_P) != 0) return 1;
+    if (load_linear_model5("model_E.json", &g_model_E) != 0) return 1;
+
+    SCHEDULER_PRINTF("Loaded models:\n");
+    SCHEDULER_PRINTF(" P: b=%.3f w_cycles/ms=%.6f w_ipc=%.3f w_cmr=%.3f w_mspm=%.3f w_mspi=%.3f\n",
+                     g_model_P.intercept, g_model_P.w_cycles_per_ms, g_model_P.w_ipc, g_model_P.w_cmr,
+                     g_model_P.w_mspm, g_model_P.w_mspi);
+    SCHEDULER_PRINTF(" E: b=%.3f w_cycles/ms=%.6f w_ipc=%.3f w_cmr=%.3f w_mspm=%.3f w_mspi=%.3f\n",
+                     g_model_E.intercept, g_model_E.w_cycles_per_ms, g_model_E.w_ipc, g_model_E.w_cmr,
+                     g_model_E.w_mspm, g_model_E.w_mspi);
+
+
+
 
     if (init_csv() || init_core_allocation_csv()) {
         SCHEDULER_PERROR("Failed to initialize CSV files\n");
