@@ -17,6 +17,7 @@
 #include "monitor.h"
 #include <stdint.h>
 #include "cJSON.h"
+#include <ctype.h>
 //#include "libclassifier.h"
 
 
@@ -52,6 +53,12 @@ typedef struct {
     double w_mspi;
     int loaded;
 } LinearModel5;
+typedef struct {
+    int p_threads;
+    int e_threads;
+    int other_threads;
+    int total_threads;
+} PsrSummary;
 
 static double clamp_nonneg(double v) { return (v < 0.0) ? 0.0 : v; }
 static int json_features_ok(const cJSON *root);
@@ -163,6 +170,7 @@ typedef struct {
     char predicted_class[16];
     int last_on_p;   // 1 = currently considered on P, 0 = on E
     int has_last_on_p;
+    
 } QueueEntry;
 
 static QueueEntry queue[MAX_QUEUE_SIZE];
@@ -323,6 +331,74 @@ static void cores_to_string(int *cores, int core_count, char *coreset, size_t si
     }
 }
 
+
+static int read_processor_from_tid(pid_t tid, int *out_cpu) {
+    char path[256];
+    snprintf(path, sizeof(path), "/proc/%d/task/%d/stat", tid, tid);
+
+    FILE *f = fopen(path, "r");
+    if (!f) return -1;
+
+    char buf[4096];
+    if (!fgets(buf, sizeof(buf), f)) {
+        fclose(f);
+        return -1;
+    }
+    fclose(f);
+
+    // /proc/[pid]/stat format: pid (comm) state ppid ... processor ...
+    // The comm field can contain spaces and is enclosed in parentheses.
+    // Strategy: find the last ')' then parse fields after it.
+    char *rp = strrchr(buf, ')');
+    if (!rp) return -1;
+
+    char *s = rp + 1; // points to " state ppid ..."
+    // We need field #39 overall => after comm+state, it's the 38th numeric token in this tail.
+    // Easiest: tokenize and count. Field positions after ')' start at field 3 (state).
+    // We'll count tokens and pick the one corresponding to "processor" (field 39).
+    int field = 3;
+    char *save = NULL;
+    char *tok = strtok_r(s, " ", &save);
+    while (tok) {
+        if (*tok == '\0') { tok = strtok_r(NULL, " ", &save); continue; }
+        if (field == 39) {
+            *out_cpu = atoi(tok);
+            return 0;
+        }
+        field++;
+        tok = strtok_r(NULL, " ", &save);
+    }
+    return -1;
+}
+
+static PsrSummary summarize_psr_for_process(pid_t pid) {
+    PsrSummary sum = {0};
+
+    char task_path[256];
+    snprintf(task_path, sizeof(task_path), "/proc/%d/task", pid);
+
+    DIR *dir = opendir(task_path);
+    if (!dir) return sum;
+
+    struct dirent *ent;
+    while ((ent = readdir(dir)) != NULL) {
+        if (!isdigit((unsigned char)ent->d_name[0])) continue;
+
+        pid_t tid = (pid_t)atoi(ent->d_name);
+        if (tid <= 0) continue;
+
+        int cpu = -1;
+        if (read_processor_from_tid(tid, &cpu) != 0) continue;
+
+        sum.total_threads++;
+        if (0 <= cpu && cpu <= 7) sum.p_threads++;
+        else if (8 <= cpu && cpu <= 15) sum.e_threads++;
+        else sum.other_threads++;
+    }
+    closedir(dir);
+    return sum;
+}
+
 static int count_cores(const char *coreset) {
     int cores[64];
     int core_count = 0;
@@ -346,7 +422,7 @@ static void compute_dynamic_coresets(DynamicCoreMasks *masks) {
     }
 
     int pcores[8] = {0, 1, 2, 3, 4, 5, 6, 7};
-    int ecores[8] = {9, 10 ,11, 12, 13, 14, 15};
+    int ecores[8] = {8, 9, 10 ,11, 12, 13, 14, 15};
     int pcore_count = 8, ecore_count = 8;
     int compute_cores[64] = {0}, io_cores[64] = {0}, memory_cores[64] = {0};
     int compute_core_count = 0, io_core_count = 0, memory_core_count = 0;
@@ -1051,58 +1127,83 @@ static int tree_prefers_P(const MonitorData *d) {
 }
 
 
-
-
-static const char *choose_placement_coreset_model(MonitorData *d,int *last_on_p,int *has_last_on_p)
+static const char *choose_placement_coreset_model(pid_t pid,
+                                                  MonitorData *d,
+                                                  int *last_on_p,
+                                                  int *has_last_on_p,
+                                                  double *out_yP,
+                                                  double *out_yE)
 {
-    const double dt_ms = d->exec_time_ms;
-    const double cycles = (double)d->total_values[2]; // core_cycles
-    const double cycles_per_ms = (dt_ms > 1e-9) ? (cycles / dt_ms) : 0.0;
+    
+    const double dt_ms = 100.0;
+    const double cycles = (double)d->total_values[2];
+    const double cycles_per_ms = cycles / dt_ms;
+    // the above is a temporary fix until we can get accurate exec_time_ms
+    //const double dt_ms = d->exec_time_ms;
+    //const double cycles = (double)d->total_values[2]; // core_cycles
+    //const double cycles_per_ms = (dt_ms > 1e-9) ? (cycles / dt_ms) : 0.0;
 
     const double ipc  = d->ratios.IPC;
     const double cmr  = d->ratios.Cache_Miss_Ratio;
     const double mspm = d->ratios.MemStallCycle_per_Mem_Inst;
     const double mspi = d->ratios.MemStallCycle_per_Inst;
-    SCHEDULER_PRINTF("PID features: cycles/ms=%.2f IPC=%.4f CMR=%.6f MSPM=%.4f MSPI=%.4f -> yP=%.2f yE=%.2f last=%c\n",
-                 cycles_per_ms, ipc, cmr, mspm, mspi, yP, yE, (*last_on_p ? 'P' : 'E'));
+
     if (!isfinite(ipc) || !isfinite(cmr) || !isfinite(mspm) || !isfinite(mspi) ||
         !isfinite(cycles_per_ms) || dt_ms <= 0.0) {
+
+        if (out_yP) *out_yP = 0.0;
+        if (out_yE) *out_yE = 0.0;
+
         SCHEDULER_PRINTF("Non-finite features (or dt_ms<=0), defaulting to ALL_CORESET\n", 0);
-
-        // optional: store something meaningful for logging
-        d->compute_prob_cjson = 0.0;
-        d->io_prob_cjson = 0.0;
-        d->memory_prob_cjson = 0.0;
-
         return ALL_CORESET;
     }
 
-    double yP = predict5(&g_model_P, cycles_per_ms, ipc, cmr, mspm, mspi);
-    double yE = predict5(&g_model_E, cycles_per_ms, ipc, cmr, mspm, mspi);
+    const double yhatP = predict5(&g_model_P, cycles_per_ms, ipc, cmr, mspm, mspi);
+    const double yhatE = predict5(&g_model_E, cycles_per_ms, ipc, cmr, mspm, mspi);
 
-    // Save predictions (repurpose fields; see below)
-    d->compute_prob_cjson = yP;  // store yhat_P
-    d->io_prob_cjson = yE;       // store yhat_E
-    d->memory_prob_cjson = 0.0;  // unused, keep 0
+    if (out_yP) *out_yP = yhatP;
+    if (out_yE) *out_yE = yhatE;
 
-    // hysteresis
+    SCHEDULER_PRINTF(
+        "PID features: cycles/ms=%.2f IPC=%.4f CMR=%.6f MSPM=%.4f MSPI=%.4f -> yP=%.4f yE=%.4f last=%c\n",
+        cycles_per_ms, ipc, cmr, mspm, mspi, yhatP, yhatE, (*last_on_p ? 'P' : 'E')
+    );
+
+    // hysteresis initialization
     if (!*has_last_on_p) {
-        *last_on_p = (yP >= yE) ? 1 : 0;
+        *last_on_p = (yhatP >= yhatE) ? 1 : 0;
         *has_last_on_p = 1;
     }
 
     const char *chosen;
     if (*last_on_p == 0) {
         // currently on E: switch only if P clearly better
-        chosen = (yP > (1.0 + HYST) * yE) ? P_CORESET : E_CORESET;
+        chosen = (yhatP > (1.0 + HYST) * yhatE) ? P_CORESET : E_CORESET;
     } else {
         // currently on P: switch only if E clearly better
-        chosen = (yE > (1.0 + HYST) * yP) ? E_CORESET : P_CORESET;
+        chosen = (yhatE > (1.0 + HYST) * yhatP) ? E_CORESET : P_CORESET;
     }
+
+
+
+    SCHEDULER_PRINTF("MODEL_SCORES pid=%d yP=%.6f yE=%.6f\n", pid, yhatP, yhatE);
+
+    if (yhatE > yhatP) {
+        SCHEDULER_PRINTF("MODEL_PREFERS_E pid=%d yP=%.6f yE=%.6f\n", pid, yhatP, yhatE);
+    } else if (yhatP > yhatE) {
+        SCHEDULER_PRINTF("MODEL_PREFERS_P pid=%d yP=%.6f yE=%.6f\n", pid, yhatP, yhatE);
+    } else {
+        SCHEDULER_PRINTF("MODEL_TIE pid=%d yP=%.6f yE=%.6f\n", pid, yhatP, yhatE);
+    }
+
+
+
+
 
     *last_on_p = (chosen == P_CORESET);
     return chosen;
 }
+
 
 // static const char *choose_placement_coreset(const MonitorData *d) {
 //     double x[10] = {
@@ -1134,6 +1235,7 @@ static const char *choose_placement_coreset_model(MonitorData *d,int *last_on_p,
 
 
 
+
 static void process_queue(DynamicCoreMasks *masks) {
     SCHEDULER_PRINTF("Processing queue with %d entries\n", queue_size);
 
@@ -1150,6 +1252,7 @@ static void process_queue(DynamicCoreMasks *masks) {
         MonitorData data = queue[i].current_data;
         int startup_flag = queue[i].startup_flag;
 
+        // restore latest topology counts from history if available
         if (queue[i].history_count > 0) {
             int latest_idx = queue[i].history_count - 1;
             data.pthread_count = queue[i].history[latest_idx].pthread_count;
@@ -1157,9 +1260,11 @@ static void process_queue(DynamicCoreMasks *masks) {
             data.ecore_count   = queue[i].history[latest_idx].ecore_count;
         }
 
+        // compute weighted ratios if we have history / last_used
         if (queue[i].history_count > 0 || queue[i].has_last_used) {
             compute_weighted_ratios(pid, &data, queue[i].history,
-                                    queue[i].history_count, &queue[i].last_used,
+                                    queue[i].history_count,
+                                    &queue[i].last_used,
                                     queue[i].has_last_used);
         }
 
@@ -1169,51 +1274,59 @@ static void process_queue(DynamicCoreMasks *masks) {
             continue;
         }
 
+        // timing (your current code measures ~0us because start/end are back-to-back)
         struct timespec start_time, end_time;
         clock_gettime(CLOCK_MONOTONIC, &start_time);
+        // ... if you actually do classification work, put it here ...
         clock_gettime(CLOCK_MONOTONIC, &end_time);
         long class_time_cjson = (end_time.tv_sec - start_time.tv_sec) * 1000000
                               + (end_time.tv_nsec - start_time.tv_nsec) / 1000;
 
         const char *predicted_class = "N/A";
+
+        double yP = 0.0, yE = 0.0;
         const char *chosen_coreset = NULL;
 
         if (startup_flag) {
             chosen_coreset = ALL_CORESET;
         } else {
             chosen_coreset = choose_placement_coreset_model(
+                pid,
                 &data,
                 &queue[i].last_on_p,
-                &queue[i].has_last_on_p
+                &queue[i].has_last_on_p,
+                &yP, &yE
             );
         }
 
         write_to_csv(&data, class_time_cjson, predicted_class);
 
-        if (is_process_alive(pid)) {
-            set_affinity_for_all_threads(pid, chosen_coreset);
-            SCHEDULER_PRINTF("PID %d placement -> %s\n", pid, chosen_coreset);
-            verify_affinity(pid);
+        // apply placement once
+        set_affinity_for_all_threads(pid, chosen_coreset);
+        SCHEDULER_PRINTF("PID %d placement -> %s\n", pid, chosen_coreset);
+        verify_affinity(pid);
 
-            queue[i].startup_flag = 0;
-            queue[i].last_used = data;
-            queue[i].has_last_used = 1;
-            queue[i].current_data = data;
-            queue[i].history_count = 0;
+        // evaluation logging: wait then measure actual PSR distribution
+        usleep(50 * 1000);
+        PsrSummary actual = summarize_psr_for_process(pid);
+        printf("SCHED_EVAL pid=%d yP=%.6f yE=%.6f chosen=%s actual_P=%d actual_E=%d actual_other=%d total=%d\n",
+               pid, yP, yE, chosen_coreset,
+               actual.p_threads, actual.e_threads, actual.other_threads, actual.total_threads);
 
-            strncpy(queue[i].predicted_class, predicted_class,
-                    sizeof(queue[i].predicted_class) - 1);
-            queue[i].predicted_class[sizeof(queue[i].predicted_class) - 1] = '\0';
+        // update queue state
+        queue[i].startup_flag = 0;
+        queue[i].last_used = data;
+        queue[i].has_last_used = 1;
+        queue[i].current_data = data;
+        queue[i].history_count = 0;
 
-            i++;
-        } else {
-            SCHEDULER_PRINTF("Process PID %d died after processing, removing\n", pid);
-            remove_queue_entry(i);
-        }
+        strncpy(queue[i].predicted_class, predicted_class,
+                sizeof(queue[i].predicted_class) - 1);
+        queue[i].predicted_class[sizeof(queue[i].predicted_class) - 1] = '\0';
+
+        i++;
     }
 }
-
-
 
 
 
@@ -1362,7 +1475,6 @@ static void process_queue(DynamicCoreMasks *masks) {
             //     }
             // }
         //}
-
 
 
 void cleanup_scheduler(int server_fd) {
